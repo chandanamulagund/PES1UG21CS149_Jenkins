@@ -1,21 +1,34 @@
-pipeline { agent any
-stages { stage('Build') {
-steps { script {
-// Compile the .cpp file using a shell script
-echo 'Build' }
-} }
-stage('Test') { steps {
-script {
-// Print the output of the compiled .cpp file echo ' test'
-} }
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // Placeholder build step
+                sh 'echo "Placeholder build step"'
+                echo 'Build Stage Successful'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Placeholder test step
+                sh 'echo "Placeholder test step"'
+                echo 'Test Stage Successful'
+                // Add post condition for test results if needed
+            }
+        }
+        stage('Deploy') 
+            steps 
+                // Placeholder deploy step
+                sh 'echo "Placeholder deploy step"'
+                echo 'Deploy Successful'
+            }
+        
+    }
+    
+    post {
+        failure {
+            echo 'Pipeline failed'
+        }
+    }
 }
-stage('Deploy') { steps {
-script {
-// Your deployment steps go here
-echo 'Deploying...'
-// Add your deployment commands or scripts
-} }
-} } }}
-post { failure {
-echo 'Pipeline failed!' }
-} }
