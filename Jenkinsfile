@@ -15,7 +15,7 @@ script {
 echo 'Deploying...'
 // Add your deployment commands or scripts
 } }
-} }
+} } }}
 post { failure {
 echo 'Pipeline failed!' }
 } }
