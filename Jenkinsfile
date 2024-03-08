@@ -12,7 +12,7 @@ pipeline {
     stage('Test') {
         steps {
                 // Placeholder test step
-                sh 'echo "Placeholder test step"'
+                sh  "Placeholder test step"'
                 echo 'Test Stage Successful'
                 // Add post condition for test results if needed
             }
