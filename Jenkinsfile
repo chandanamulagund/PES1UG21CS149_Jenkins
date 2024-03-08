@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Placeholder build step
                 sh 'echo "Placeholder build step"'
-                echo 'Build Stage Successful'
+                echo 'Build Stage Successful
             }
         }
         stage('Test') {
