@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Placeholder build step
                 sh 'echo "Placeholder build step"'
-                echo 'Build Stage Successful
+                echo 'Build Stage Successful'
             }
         }
         stage('Test') {
@@ -17,14 +17,14 @@ pipeline {
                 // Add post condition for test results if needed
             }
         }
-        stage('Deploy') {
-            steps {
-                // Placeholder deploy step
-                sh 'echo "Placeholder deploy step"'
-                echo 'Deploy Successful'
-            }
-        }
-    }
+        
+stage('Deploy') { steps {
+script {
+// Your deployment steps go here
+echo 'Deploying...'
+// Add your deployment commands or scripts
+} }
+} }
     
     post {
         failure {
